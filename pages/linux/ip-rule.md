@@ -2,10 +2,15 @@
 
 > IP routing policy database management.
 > More information: <https://manned.org/ip-rule>.
+sudo ip rule add from all lookup 100
 
 - Display the routing policy:
 
 `ip {{[ru|rule]}}`
+
+- Create a new generic routing table:
+
+`sudo ip {{[ru|rule]}} {{[a|add]}} from all lookup 100`
 
 - Add a new rule based on packet source addresses:
 
@@ -18,10 +23,6 @@
 - Delete a rule based on packet source addresses:
 
 `sudo ip {{[ru|rule]}} {{[d|delete]}} from {{192.168.178.2/32}}`
-
-- Delete a rule based on packet destination addresses:
-
-`sudo ip {{[ru|rule]}} {{[d|delete]}} to {{192.168.178.2/32}}`
 
 - Flush all deleted rules:
 
