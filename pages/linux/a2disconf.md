@@ -7,6 +7,6 @@
 
 `sudo a2disconf {{configuration_file}}`
 
-- Don't show informative messages:
+- Don't show informative message tests:
 
 `sudo a2disconf {{[-q|--quiet]}} {{configuration_file}}`
