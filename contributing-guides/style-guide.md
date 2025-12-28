@@ -1,4 +1,4 @@
-# Style guide
+# Style guides
 
 This page lists specific formatting instructions for `tldr` pages.
 
