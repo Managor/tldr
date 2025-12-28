@@ -7,7 +7,7 @@ on:
     # Ignore all other languages except English
     paths-ignore:
       - 'pages.*/*/*'
-      - 'contributing-guides/style-guide.*'
+      - 'contributing-guides/style-guide.*.md'
       - 'package-lock.json'
 
 jobs:
@@ -33,6 +33,6 @@ jobs:
           # Exit with 0 regardless of typos.
           only_warn: 1
           # Skip non-English pages
-          skip: ./pages.*/*/*.md,./contributing-guides/style-guide.*.md
+          skip: ./pages.*/*/*.md,./contributing-guides/style-guide.*
           # Only check files in the PR
           path: ${{ steps.changed-files.outputs.all_changed_files }}
