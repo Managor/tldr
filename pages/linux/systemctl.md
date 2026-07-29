@@ -10,7 +10,7 @@
 
 - List failed units:
 
-`systemctl --failed`
+`systemctl --fail`
 
 - Start/Stop/Restart/Reload/Show the status of a service:
 
