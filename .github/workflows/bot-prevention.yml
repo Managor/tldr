@@ -15,18 +15,6 @@ jobs:
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         with:
           script: |
-            if (context.payload.pull_request.user.type === "Bot") {
-              return;
-            }
-            const { data: permissionData } = await github.rest.repos.getCollaboratorPermissionLevel({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              username: context.payload.pull_request.user.login
-            });
-            if (permissionData.permission === "write" || permissionData.permission === "admin") {
-              return;
-            }
-            
             const requiredTexts = [
               "The page(s) are in the correct platform directories: `common`, `linux`, `osx`, `windows`, `sunos`, `android`, etc.",
               "The page description(s) have links to documentation or a homepage.",
